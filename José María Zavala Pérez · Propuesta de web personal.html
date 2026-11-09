@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>José María Zavala Pérez · Investigación sobre impacto social</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--ink:#111;--mut:#555;--acc:#2b4a9e;--line:#d5d8e0;--soft:#eef1f8;--blue:#2b4a9e;--grey:#6f6f6f;--blk:#0d0d0d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0d0d0d;--ink:#f2f2f2;--mut:#a8a8a8;--acc:#7fa2ff;--line:#2a2a2a;--soft:#171717}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0d0d0d;--ink:#f2f2f2;--mut:#a8a8a8;--acc:#7fa2ff;--line:#2a2a2a;--soft:#171717}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Century Gothic",Futura,"Avenir Next",Avenir,"Trebuchet MS",system-ui,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 22px}
+a{color:var(--acc)}
+.plate{background:var(--blue);color:#fff;text-align:center;padding:28px 0 24px}
+.nm{font-size:clamp(28px,6.5vw,54px);font-weight:500;letter-spacing:.07em;text-transform:uppercase;line-height:1.15}
+.role{background:var(--grey);color:#fff;font-style:italic;text-align:center;padding:7px 0;font-size:15px;border-top:2px solid #ddd;border-bottom:2px solid #ddd}
+nav{display:flex;flex-wrap:wrap;gap:2px 22px;padding-top:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+nav a{text-decoration:none;color:var(--ink);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding:6px 0;border-bottom:3px solid transparent}
+nav a:hover{color:var(--acc)} nav a.on{border-bottom-color:var(--blue);color:var(--acc)}
+.view{display:none;padding:34px 0 40px} .view.show{display:block}
+h1{font-size:32px;font-weight:600;line-height:1.2;margin:.2em 0 .4em}
+h2{display:block;width:fit-content;max-width:100%;background:var(--blue);color:#fff;padding:7px 18px;font:600 15px/1.3 "Century Gothic",Futura,"Trebuchet MS",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin:26px 0 8px;font-weight:600}
+.hero{display:grid;grid-template-columns:240px 1fr;gap:36px;padding:6px 0 44px;align-items:center}
+.ph{margin:0;background:var(--soft);border:1px dashed var(--mut);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--mut);font-size:13px;line-height:1.4;padding:14px;border-radius:3px}
+.ph svg{width:40%;opacity:.5;margin-bottom:8px}
+.portrait{aspect-ratio:4/5}
+.kick{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.lead{font-size:19px;margin:0 0 14px}
+.meta{font-size:14px;color:var(--mut)}
+.sub{font-size:15px;color:var(--mut);margin:0 0 20px;max-width:62ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card .ph{aspect-ratio:4/3;margin-bottom:12px}
+.card h4{font-size:18px;line-height:1.3;margin:0 0 6px;font-weight:600}
+.card p{font-size:15px;margin:0 0 8px}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--acc);font-weight:600}
+.row{display:grid;grid-template-columns:84px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:16px}
+.row .y{font-size:14px;color:var(--mut);padding-top:2px}
+.row small{display:block;font-size:14px;color:var(--mut)}
+.line{padding:18px 0;border-top:1px solid var(--line)} .line ul{margin:6px 0 0;padding-left:20px;font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;font-size:16px} .two ul,.view>ul{padding-left:20px;margin:0}
+.small{font-size:14px;color:var(--mut)}
+.panel{background:var(--blk);color:#f2f2f2;padding:34px 26px} .panel a{color:#9db8ff}
+.panel .note{background:#1b1b1b;color:#ccc;border-left:3px solid #9db8ff;padding:10px 14px;font-size:13px;margin-top:20px}
+.qr{float:right;width:124px;height:124px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:bold;font-size:13px;margin:0 0 12px 16px}
+footer{border-top:1px solid var(--line);padding:20px 0 30px;font-size:13px;color:var(--mut)}
+@media (max-width:720px){
+ body{font-size:16px}h1{font-size:26px}.hero{grid-template-columns:1fr;gap:22px}.portrait{max-width:200px}
+ .cards,.two{grid-template-columns:1fr}.row{grid-template-columns:62px 1fr;gap:8px}nav{gap:0 16px}}
+details.exp{border-bottom:1px solid var(--line)}
+details.exp summary{cursor:pointer;list-style:none;padding:12px 0;display:flex;gap:10px;font-size:16px}
+details.exp summary::-webkit-details-marker{display:none}
+details.exp summary::before{content:"+";font-weight:700;color:var(--acc);width:14px;flex:none}
+details.exp[open] summary::before{content:"\2013"}
+.arrow{color:var(--acc)}
+.det{padding:0 0 16px 24px;font-size:15px}
+.yrs{font-size:13px;color:var(--mut);margin-bottom:4px}
+.tg{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);color:var(--acc);border-radius:99px;padding:1px 9px;margin:8px 6px 0 0}
+.fl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.chip{border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:3px 13px;cursor:pointer;font:13px "Century Gothic",Futura,"Trebuchet MS",system-ui,sans-serif}
+.chip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.th{font-weight:600;margin:20px 0 4px;border-left:4px solid var(--blue);padding-left:10px}
+.cl{list-style:none;padding:0;margin:0}.cl li{padding:7px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hrs{color:var(--mut);font-size:13px}
+.pl{padding-left:20px;margin:0}.pl li{margin-bottom:10px;font-size:15px}
+</style>
+</head>
+<body>
+<header>
+ <div class="plate"><div class="w"><div class="nm">José María<br>Zavala Pérez</div></div></div>
+ <div class="role"><div class="w">Sociólogo · Investigador y consultor en impacto social</div></div>
+ <nav class="w">
+  <a href="#inicio">Inicio</a><a href="#lineas">Líneas de trabajo</a><a href="#proyectos">Proyectos</a><a href="#academia">Academia</a><a href="#trayectoria">Trayectoria</a><a href="#competencias">Competencias</a><a href="#contacto">Contacto</a>
+ </nav>
+</header>
+
+<main class="w">
+
+<section class="view" id="v-inicio">
+ <div class="hero">
+  <figure class="ph portrait"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg>Tu foto aquí<br>(retrato, 4:5)</figure>
+  <div>
+   <div class="kick">Investigación · Digitalización · Sociedad</div>
+   <h1>Qué ocurre cuando la tecnología se convierte en política pública</h1>
+   <p class="lead">Investigo el impacto social de la ciencia, la tecnología y la innovación.</p>
+   <p>Llevo más de quince años evaluando el impacto social de las tecnologías y de las políticas que las rodean, desde la vigilancia y la privacidad hasta la transición justa, para empresas, universidades, administraciones y organizaciones del tercer sector, en España y en Europa.</p>
+   <p class="meta">Madrid · Sociólogo (UPV/EHU) · Máster en Sociedad de la Información y el Conocimiento (USC)</p>
+  </div>
+ </div>
+ <h2>Tres muestras de mi trabajo</h2>
+ <div class="cards">
+  <article class="card"><figure class="ph"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v11H4zM2 18h20v2H2z"/></svg>Foto sugerida: pantalla, plataforma o dispositivo digital</figure>
+   <div class="tag">Digitalización</div><h4>Impacto de la digitalización en la desigualdad</h4>
+   <p>Investigación realizada con el programa Google Policy Fellowship 2019 para la Fundación Cotec.</p><a href="#lineas">Ver líneas de trabajo →</a></article>
+  <article class="card"><figure class="ph"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l6 3V9l6 3V4h3v17z"/></svg>Foto sugerida: Laciana o El Bierzo, mina o central térmica</figure>
+   <div class="tag">Sostenibilidad</div><h4>Convenios de Transición Justa en Laciana y El Bierzo</h4>
+   <p>Caso de estudio del proyecto GreenPaths sobre el cierre de minas y centrales térmicas, con Oxfam Intermón.</p><a href="#proyectos">Ver proyectos →</a></article>
+  <article class="card"><figure class="ph"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6zM14 20c0-2 1-4 3-4s5 1 5 4z"/></svg>Foto sugerida: taller, grupo focal o jornada participativa</figure>
+   <div class="tag">Políticas públicas y ciudadanía</div><h4>Presupuestos participativos en Madrid</h4>
+   <p>Design research con observación, entrevistas y grupos focales para la Fundación Hewlett.</p><a href="#trayectoria">Ver trayectoria →</a></article>
+ </div>
+</section>
+
+<section class="view" id="v-lineas">
+ <h2>Líneas de trabajo</h2>
+ <p class="sub">Tres temas que atraviesan mis proyectos, mis textos y mi experiencia profesional.</p>
+ <div class="line"><h3>Digitalización</h3><p>Cómo cambian la economía, los servicios públicos y los derechos cuando la vida se vuelve digital, y quién gana y quién queda fuera.</p>
+  <ul><li>ONTSI–Red.es: impactos de las tecnologías y políticas digitales (2022–2023)</li><li>Fundación Cotec: digitalización y desigualdad (2019)</li><li>Eticas Research &amp; Consulting: evaluación de impacto social de tecnologías (2014–2018)</li><li>D-CENT: tecnologías para la democracia del siglo XXI</li></ul></div>
+ <div class="line"><h3>Sostenibilidad</h3><p>La dimensión social de la transición ecológica: quién la paga, quién se beneficia y cómo se evalúa que sea justa.</p>
+  <ul><li>Oxfam Intermón: políticas de transición justa, proyecto GreenPaths (2023–2026)</li><li>UPM: Sostenibilidad en la Construcción y la Industria, proyecto IN4SOC (2020–2022)</li><li>Docencia en másteres de Economía Circular y Eficiencia Energética (UPM)</li></ul></div>
+ <div class="line"><h3>Políticas públicas y ciudadanía</h3><p>Participación, actitudes hacia las políticas y competencias cívicas, con el trabajo de campo como método.</p>
+  <ul><li>Reboot: presupuestos participativos (2018)</li><li>Komons: actitudes y percepciones hacia las políticas europeas (2021)</li><li>SURPRISE e INSPEC2T: aceptabilidad de la seguridad y participación ciudadana</li><li>IN4SOC: competencias sociales y cívicas en universidades técnicas</li></ul></div>
+</section>
+
+<section class="view" id="v-proyectos">
+ <h2>Proyectos</h2>
+ <h3>Proyectos europeos de investigación</h3>
+ <ul class="pl">
+  <li><a href="https://surprise-project.eu">SURPRISE</a>: Surveillance, Privacy and Security: A large scale participatory assessment of criteria and factors determining acceptability and acceptance of security technologies in Europe.</li>
+  <li><a href="https://slandail.eu">SLÁNDÁIL</a>: Empowering emergency response using social media.</li>
+  <li><a href="https://abc4eu.com">ABC4EU</a>: Automated border control gates for Europe.</li>
+  <li><a href="https://www.inspec2t-project.eu">INSPEC2T</a>: Inspiring citizens participation for enhanced community policing actions.</li>
+  <li><a href="https://giftforensics.eu">GIFT</a>: Generic integrated forensic toolbox for CBRN incidents.</li>
+  <li><a href="http://www.origins-project.eu">ORIGINS</a>: Restoring e-Passport confidence and leveraging extended border security.</li>
+  <li><a href="https://dcentproject.eu">D-CENT</a>: Technologies for 21st century democracy.</li>
+  <li><a href="https://blogs.upm.es/in4soc">IN4SOC</a>: Internships for enhancing social and civic key competences for lifelong learning in technical universities.</li>
+  <li><a href="https://greenpaths.info">GreenPaths</a>: Developing effective policies for the green transition.</li>
+ </ul>
+ <h3>Otros proyectos financiados</h3>
+ <ul class="pl">
+  <li>«Biometric data in large EU IT systems in the areas of borders, visa and asylum». FRA, Agencia de la UE para los Derechos Fundamentales.</li>
+  <li>«L’ecosistema de les TIC des de la perspectiva de gènere a Barcelona». Eticas Foundation.</li>
+  <li>«Co-Designing the Future of the Participatory Budgeting Movement». Hewlett Foundation.</li>
+  <li>«Listen to Europe». European Movement Initiative.</li>
+ </ul>
+</section>
+
+<section class="view" id="v-academia">
+ <h2>Academia</h2>
+ <h3>Publicaciones</h3>
+ <ul class="pl">
+  <li>Zavala-Pérez, J. M. (2022). «Simeon J. Yates and Ronald E. Rice (eds), Oxford Handbook of Digital Technology and Society». <i>Prometheus. Critical Studies in Innovation</i>, 38(3), 356–364. <a href="https://www.scienceopen.com/hosted-document?doi=10.13169/prometheus.38.3.0356">Enlace</a></li>
+  <li>Zavala-Pérez, J. M., Jiménez-Rivero, A. y García-Navarro, J. (2021). «Strategies and Challenges for the Promotion of a Responsibility Mindset in Technical Career Students during Internships». <i>Advances in Building Education</i>, 5(3), 86–105. <a href="http://polired.upm.es/index.php/abe/article/view/4735">Enlace</a></li>
+  <li>Zavala-Pérez, J. M., Jiménez-Rivero, A. y García-Navarro, J. (2020). «Internships for Enhancing Social and Civic Key Competences for Lifelong Learning in Technical Universities: The Erasmus+ IN4SOC Project». <i>EDULEARN20 Proceedings</i>, pp. 7921–7930.</li>
+  <li>Zavala-Pérez, J. M., Jiménez-Rivero, A. y García-Navarro, J. (2020). «Social and Civic Competences for the Lifelong Learning of Higher Education Students: Assessment of Internships with Societal Impact and Social Responsibility». <i>EDULEARN20 Proceedings</i>, pp. 7938–7946.</li>
+  <li>Galdon-Clavell, G. y Zavala-Pérez, J. M. (2018). «Big Data», en Arrigo, B. A. (ed.), <i>The Sage Encyclopedia of Surveillance, Security, and Privacy</i>. Thousand Oaks, CA: SAGE.</li>
+  <li>Galdon-Clavell, G., Zamorano, M. M. y Zavala-Pérez, J. M. (2018). «ICTs and Community Policing: An Ethical Framework», en Haberfeld, M. R. y Leventakis, G. (eds.), <i>Societal Implications of Community-Oriented Policing and Technology</i>. Cham: Springer. <a href="https://link.springer.com/book/10.1007%2F978-3-319-89297-9">Enlace</a></li>
+  <li>Zavala-Pérez, J. M. (2017). «Legal, Ethical, and Societal aspects of GIFT CBRN». <i>CBRN Forensics</i>, 2, pp. 39–40.</li>
+  <li>Bria, F., Ruiz, J., Galdon-Clavell, G., Zavala-Pérez, J. M., Fichtner, L. y Halpin, H. (2015). «D3.3. Research on Identity Ecosystem». Decentralised Citizens Engagement Technologies. <a href="https://www.nesta.org.uk/report/d-cent-research-on-digital-identity-ecosystems">Enlace</a></li>
+  <li>De Vicente, J. L., Galdon-Clavell, G., Frowd, P. M. y Zavala-Pérez, J. M. (2014). <i>Anonimízate. Manual de Autodefensa Electrónica. Anonymise yourself. Electronic Self-Defence Handbook</i>. Barcelona: Servicio de Exposiciones del CCCB.</li>
+  <li>Zavala-Pérez, J. M. (2012). «Registry Culture and Networked Sociability: Building Individual Identity through Information Records», en Comunello, F. (ed.), <i>Networked Sociability and Individualism: Technology for Personal and Professional Relationships</i>. Hershey, PA: Information Science Reference, pp. 41–62.</li>
+  <li>Zavala-Pérez, J. M. (2011). Reseña de Carlsson, U., Taye, S., Jacquinot-Delaunay, G. y Pérez Tornero, J. M. (eds), <i>Empowerment through Media Education: An Intercultural Dialogue</i>. Göteborg: Nordicom, 2008. <i>International Sociology</i>, 26(5), pp. 658–660. <a href="https://doi.org/10.1177/02685809110260050805">DOI</a></li>
+  <li>Zavala-Pérez, J. M. (2009). <i>Las Redes Sociales Digitales en el Aula</i>. Pontevedra: EDA.</li>
+ </ul>
+ <h3>Ponencias y presentaciones</h3>
+ <div class="row"><div class="y">2022</div><div>Jornadas de los Observatorios del Mercado de Trabajo «Observamos en red. Orientando la formación» <small>SEPE</small></div></div>
+ <div class="row"><div class="y">2021</div><div>X Congreso Nacional y IV Internacional de Aprendizaje-Servicio Universitario ApS(U)</div></div>
+ <div class="row"><div class="y">2021</div><div>Models and Technologies of Civic Education in International Educational Practices of Universities <small>NIHE</small></div></div>
+ <div class="row"><div class="y">2021</div><div>5th International Conference of Educational Innovation in Building <small>UPM</small></div></div>
+ <div class="row"><div class="y">2020</div><div>12th annual International Conference on Education and New Learning Technologies <small>IATED</small></div></div>
+ <div class="row"><div class="y">2017</div><div>Next Generation Community Policing Conference <small>KEMEA</small></div></div>
+ <div class="row"><div class="y">2016</div><div>7th Biannual Surveillance and Society Conference <small>SSN</small></div></div>
+ <h3>Comités científicos</h3>
+ <div class="row"><div class="y">2015–18</div><div>Miembro del Comité Científico: Conferencia Ibérica de Sistemas y Tecnologías de la Información</div></div>
+ <div class="row"><div class="y">2015–18</div><div>Miembro del Comité Científico: Revista Ibérica de Sistemas y Tecnologías de la Información</div></div>
+ <h3>Docencia</h3>
+ <div class="row"><div class="y">2020</div><div>Máster en Economía Circular <small>UPM</small></div></div>
+ <div class="row"><div class="y">2020</div><div>Máster en Eficiencia Energética en la Edificación, la Industria y el Transporte <small>UPM</small></div></div>
+ <div class="row"><div class="y">2020</div><div>Máster en Ingeniería de Sistemas Agrarios <small>UPM</small></div></div>
+ <div class="row"><div class="y">2015</div><div>Máster en Tecnología y Privacidad <small>UdG</small></div></div>
+ <div class="row"><div class="y">2015</div><div>Máster en Tecnología y Seguridad <small>UdG</small></div></div>
+ <div class="row"><div class="y">2013</div><div>«Nuevas Tecnologías, Redes Sociales y Privacidad». Programa «Universidad para los mayores» <small>UCM</small></div></div>
+</section>
+
+<section class="view" id="v-trayectoria">
+ <h2>Trayectoria</h2>
+ <h3>Experiencia profesional</h3>
+ <div class="fl">
+  <button class="chip" data-f="all" aria-pressed="true">Todas</button><button class="chip" data-f="dig" aria-pressed="false">Digitalización</button><button class="chip" data-f="sos" aria-pressed="false">Sostenibilidad</button><button class="chip" data-f="ciu" aria-pressed="false">Ciudadanía y políticas públicas</button>
+ </div>
+ <details class="exp" data-t="sos ciu"><summary><span><b>Oxfam Intermón</b> <span class="arrow">→</span> Impacto social de las políticas de transición justa</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2023–2026</div>Investigador en el proyecto GreenPaths e investigador principal del caso de estudio «Convenios de Transición Justa – Cierre de minas y centrales térmicas en Laciana y El Bierzo».<br><span class="tg">Sostenibilidad</span><span class="tg">Ciudadanía y políticas públicas</span></div></details>
+ <details class="exp" data-t="dig ciu"><summary><span><b>ONTSI · Red.es</b> <span class="arrow">→</span> Impacto social de tecnologías y políticas digitales</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2022–2023</div>Técnico de estudios en el Observatorio Nacional de Tecnología y Sociedad (Red.es). Generación de conocimiento sobre los impactos del desarrollo tecnológico en la economía, servicios públicos, derechos y sociedad.<br><span class="tg">Digitalización</span><span class="tg">Ciudadanía y políticas públicas</span></div></details>
+ <details class="exp" data-t="sos ciu"><summary><span><b>Universidad Politécnica de Madrid</b> <span class="arrow">→</span> Competencias cívicas y sociales en universidades técnicas</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2020–2022</div>Investigador en el dpto. UPM-giSCI: Sostenibilidad en la Construcción y la Industria (proyecto IN4SOC). Tutoría y orientación a alumnado para la implementación de aspectos cívicos y sociales.<br><span class="tg">Sostenibilidad</span><span class="tg">Ciudadanía y políticas públicas</span></div></details>
+ <details class="exp" data-t="dig ciu"><summary><span><b>Komons</b> <span class="arrow">→</span> Actitudes y percepciones hacia las políticas europeas</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2021</div>Investigación europea con fuentes digitales: social media listening, desarrollo de entornos de análisis; análisis cualitativo de datos para el caso de España; apoyo al análisis a nivel europeo; apoyo en tareas de coordinación.<br><span class="tg">Digitalización</span><span class="tg">Ciudadanía y políticas públicas</span></div></details>
+ <details class="exp" data-t="dig"><summary><span><b>Fundación Cotec para la Innovación</b> <span class="arrow">→</span> Impacto de la digitalización en la desigualdad</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2019</div>Programa Google Policy Fellowship 2019. Tema de investigación: «Impacto de la digitalización en la desigualdad».<br><span class="tg">Digitalización</span></div></details>
+ <details class="exp" data-t="ciu"><summary><span><b>Reboot</b> <span class="arrow">→</span> Actitudes y percepciones hacia los presupuestos participativos</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2018</div>Investigación sobre presupuestos participativos (Fundación Hewlett). Ejecución y documentación de la investigación mediante metodologías de design research. Trabajo de campo en Madrid: actividades de observación, testing, entrevistas y grupos focales.<br><span class="tg">Ciudadanía y políticas públicas</span></div></details>
+ <details class="exp" data-t="dig"><summary><span><b>Eticas Research &amp; Consulting</b> <span class="arrow">→</span> Evaluación de impacto social de las tecnologías</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2014–2018</div>Evaluación del impacto social de tecnologías digitales (aspectos éticos, legales y sociales). Investigación documental, investigación social aplicada (entrevistas, grupos focales, análisis, etc.), elaboración y redacción de informes, participación en reuniones y conferencias, impartición de cursos y ponencias.<br><span class="tg">Digitalización</span></div></details>
+ <details class="exp" data-t=""><summary><span><b>Opta Consultores</b> <span class="arrow">→</span> Investigación social y de mercado (temática variada)</span></summary>
+  <div class="det"><div class="yrs">Investigador · 2010–2012</div>Participación integral en todo el ciclo de investigación. Diseño de cuestionarios, realización de entrevistas, procesamiento y análisis de datos (cualitativos y cuantitativos), redacción de informes, presentación de resultados de investigación.</div></details>
+
+ <h3>Estudios académicos</h3>
+ <div class="row"><div class="y">2014</div><div><b>Máster en Sociedad de la Información y el Conocimiento</b><small>Universidad de Santiago de Compostela. Grupo de Investigación Sociedade Tecnoloxías e Territorio.</small></div></div>
+ <div class="row"><div class="y">2008</div><div><b>Diploma de Estudios Avanzados</b><small>IUIOG–Universidad Complutense de Madrid. Doctorado en «Problemas contemporáneos en la sociedad de la información». Beca de investigación del DAAD: estancia como Visiting Scholar en el instituto WZB (Berlín), bajo la supervisión de Wolfgang Merkel.</small></div></div>
+ <div class="row"><div class="y">2004</div><div><b>Licenciatura en Sociología</b><small>Universidad del País Vasco. Itinerario «Política y sociedad en el mundo contemporáneo».</small></div></div>
+
+ <h3>Cursos y certificados</h3>
+ <div class="th">Investigación</div>
+ <ul class="cl">
+  <li>Técnico en calidad en investigación social y de mercados <span class="hrs">· 280 h · Colegio Profesional de C. Política y Sociología · certificado</span></li>
+  <li>Data Science: «R Basics»; «Visualization»; «Probability» <span class="hrs">· 60 h · HarvardX · certificado</span></li>
+  <li>La Práctica de la Investigación-Acción Participativa <span class="hrs">· 20 h · Colectivo Ioé</span></li>
+ </ul>
+ <div class="th">Impacto social</div>
+ <ul class="cl">
+  <li>Certificate Programme in Social Impact Measurement Practices <span class="hrs">· 60 h · LSBA · certificado</span></li>
+  <li>Máster Online en Nueva Economía <span class="hrs">· 300 h · Foro NESI · certificado</span></li>
+  <li>Try RRI! A guide for Responsible Research and Innovation <span class="hrs">· 6 h · Universidad de Ámsterdam</span></li>
+  <li>Responsible Innovation <span class="hrs">· 30 h · Delft University of Technology</span></li>
+ </ul>
+ <div class="th">Digitalización</div>
+ <ul class="cl">
+  <li>AI Governance: fundamentals <span class="hrs">· 20 h · International Telecommunication Union (ITU)</span></li>
+  <li>Inteligencia Artificial (IA) <span class="hrs">· 8 h · Tecnofor-SNGULAR</span></li>
+  <li>Interdisciplinary Privacy Course 2010 <span class="hrs">· 20 h · KU Leuven</span></li>
+ </ul>
+ <div class="th">Ciudadanía</div>
+ <ul class="cl">
+  <li>El Lenguaje de la Democracia en el Siglo XXI <span class="hrs">· 30 h · UIMP</span></li>
+  <li>Intercultural Approach in Conflict Management <span class="hrs">· 40 h · Programa UE «Youth in Action»</span></li>
+ </ul>
+ <div class="th">Sostenibilidad</div>
+ <ul class="cl">
+  <li>Técnicas de Investigación Social Aplicadas al Medio Ambiente y el Desarrollo Sostenible <span class="hrs">· 20 h · CIMAS – LCE</span></li>
+ </ul>
+</section>
+
+<section class="view" id="v-competencias">
+ <h2>Competencias</h2>
+ <div class="two">
+  <div><h3>Idiomas</h3><ul><li>Español (nativo)</li><li>Inglés (C1)</li><li>Alemán (B2–C1)</li></ul>
+  <h3>Digitales</h3><ul><li>Ofimática (MS Office)</li><li>Software de investigación: R, SPSS, Atlas.ti</li><li>Multimedia: Photoshop, Premiere</li></ul></div>
+  <div><h3>Personales y socio-cívicas</h3><ul><li>Pensamiento crítico</li><li>Adaptabilidad</li><li>Creatividad</li><li>Empatía</li><li>Integridad</li></ul></div>
+ </div>
+</section>
+
+<section class="view" id="v-contacto">
+ <div class="panel">
+  <h2>Contacto</h2><div class="qr">QR<br>vCard</div>
+  <p>¿Una colaboración, una evaluación, una charla? Escríbeme a <a href="mailto:zavala@etik.com">zavala@etik.com</a> o encuéntrame en <a href="http://es.linkedin.com/in/jmzavalaperez">LinkedIn</a>.</p>
+  <p><a href="#contacto">Descargar CV en PDF</a> <span class="small">(enlace de ejemplo)</span></p>
+  <div class="note">Pendiente: confirmar qué correo publicar (tu tarjeta lleva un Gmail) y si añadir teléfono.</div>
+ </div>
+</section>
+
+</main>
+<footer><div class="w">© 2026 José María Zavala Pérez · Actualizado en noviembre de 2026</div></footer>
+
+<script>
+function show(){
+ var h=(location.hash||"#inicio").slice(1),v=document.getElementById("v-"+h);
+ if(!v){h="inicio";v=document.getElementById("v-inicio")}
+ document.querySelectorAll(".view").forEach(function(e){e.classList.toggle("show",e===v)});
+ document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
+ window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);show();
+document.querySelectorAll(".fl .chip").forEach(function(b){b.onclick=function(){var f=b.dataset.f;
+ document.querySelectorAll(".fl .chip").forEach(function(c){c.setAttribute("aria-pressed",String(c===b))});
+ document.querySelectorAll("details.exp").forEach(function(d){d.hidden=!(f==="all"||d.dataset.t.indexOf(f)>-1)})}});
+</script>
+</body>
+</html>
